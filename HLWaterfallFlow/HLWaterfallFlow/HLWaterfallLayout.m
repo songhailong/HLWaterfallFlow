@@ -7,16 +7,25 @@
 //
 
 #import "HLWaterfallLayout.h"
-
+static const CGFloat ColumnMargin=10;
+static const CGFloat    RowMargin=ColumnMargin;
 @implementation HLWaterfallLayout
-
 /**
- 
+初始化工作最好在这里实现 因为collectinView的都准备完成了调用  重新布局重新调用prepareLayout
+*/
 
- @param newBounds <#newBounds description#>
- @return <#return value description#>
- */
+-(instancetype)initWithColumnsCount:(NSInteger)columnsCount{
+    if(self=[super init]){
+        //默认两列
+        self.columnsCount=columnsCount;
+    }
+    return self;
+}
+-(void)prepareLayout{
+    [super prepareLayout];
+}
 -(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds{
     return YES;
 }
+
 @end

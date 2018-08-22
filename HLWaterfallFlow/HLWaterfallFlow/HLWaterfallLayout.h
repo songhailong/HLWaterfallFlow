@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HLWaterfallLayout : UICollectionViewLayout
+@interface HLWaterfallLayout : UICollectionViewFlowLayout
 
+@property(nonatomic,assign)UIEdgeInsets sectionInset;
+/** 每一列之间的间距 */
+@property(nonatomic,assign)CGFloat columnMargin;
+/** 每一行之间的间距 */
+@property(nonatomic,assign)CGFloat rowMargin;
+/** 显示多少列 */
+@property(nonatomic,assign)NSInteger  columnsCount;
+
+-(instancetype)initWithColumnsCount:(NSInteger)columnsCount;
 @end
