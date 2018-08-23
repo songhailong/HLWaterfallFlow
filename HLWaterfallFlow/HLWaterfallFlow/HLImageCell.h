@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HLImageCell : UICollectionViewCell
-@property(nonatomic,strong)UIImageView *imageView;
+@property(nonatomic,strong)UIImageView *PimageView;
 @property(nonatomic,strong)UILabel *deifalLable;
 @property(nonatomic,strong)NSURL *imageURL;
 @end

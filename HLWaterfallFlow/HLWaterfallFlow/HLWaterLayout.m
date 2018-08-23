@@ -1,27 +1,22 @@
 //
-//  HLWaterfallLayout.m
+//  HLWaterLayout.m
 //  HLWaterfallFlow
 //
-//  Created by 靓萌服饰靓萌服饰 on 2018/8/22.
+//  Created by 靓萌服饰靓萌服饰 on 2018/8/23.
 //  Copyright © 2018年 靓萌服饰靓萌服饰. All rights reserved.
 //
 
-#import "HLWaterfallLayout.h"
-//static const CGFloat ColumnMargin=10;
-//static const CGFloat   RowMargin=ColumnMargin;
-@interface  HLWaterfallLayout()
-
+#import "HLWaterLayout.h"
+@interface  HLWaterLayout()
 /** 这个字典用来存储每一列最大的Y值(每一列的高度) */
 @property (nonatomic, strong) NSMutableDictionary *maxYDict;
 /** 存放所有的布局属性 */
 @property (nonatomic, strong) NSMutableArray *attrsArray;
 @end
-
-
-@implementation HLWaterfallLayout
+@implementation HLWaterLayout
 /**
-初始化工作最好在这里实现 因为collectinView的都准备完成了调用  重新布局重新调用prepareLayout
-*/
+ 初始化工作最好在这里实现 因为collectinView的都准备完成了调用  重新布局重新调用prepareLayout
+ */
 -(instancetype)init{
     self=[super init];
     if (self) {
@@ -33,7 +28,7 @@
         self.sectionInsets=UIEdgeInsetsMake(10, 10, 10, 10);
         for (int i = 0; i<self.columnsCount; i++) {
             NSString *column = [NSString stringWithFormat:@"%d", i];
-            self.maxYDict[column] = @(self.sectionInset.top);
+            self.maxYDict[column] = @(self.sectionInsets.top);
         }
         
     }
@@ -49,10 +44,28 @@
 //   HLWaterfallLayout *water   =[HLWaterfallLayout init];
 //    water.columnsCount=columnsCount;
 //    return water;
-//    
+//
 //}
+/**
+*  返回所有的尺寸
+*/
+- (CGSize)collectionViewContentSize
+{
+    __block NSString *maxColumn = @"0";
+    [self.maxYDict enumerateKeysAndObjectsUsingBlock:^(NSString *column, NSNumber *maxY, BOOL *stop) {
+        if ([maxY floatValue] > [self.maxYDict[maxColumn] floatValue]) {
+            maxColumn = column;
+        }
+    }];
+    return CGSizeMake(0, [self.maxYDict[maxColumn] floatValue] + self.sectionInsets.bottom);
+}
 -(void)prepareLayout{
     [super prepareLayout];
+    // 1.清空最大的Y值
+    for (int i = 0; i<self.columnsCount; i++) {
+        NSString *column = [NSString stringWithFormat:@"%d", i];
+        self.maxYDict[column] = @(self.sectionInsets.top);
+    }
     NSInteger count = [self.collectionView numberOfItemsInSection:0];
     
     NSLog(@"获取个数%zd",count);
@@ -64,8 +77,8 @@
     }
 }
 /**
-只要显示的边界发生改变就重新布局:内部会重新调用 layoutAttributesForElementsInRect方法获得布局属性  重新布局
-*/
+ 只要显示的边界发生改变就重新布局:内部会重新调用 layoutAttributesForElementsInRect方法获得布局属性  重新布局
+ */
 -(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds{
     return YES;
 }
@@ -73,7 +86,7 @@
 -(UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"layoutAttributesForItemAtIndexPath");
     //假设最短的是第0列
-  __block  NSString *minColunmn=@"0";
+    __block  NSString *minColunmn=@"0";
     [self.maxYDict enumerateKeysAndObjectsUsingBlock:^(NSString *column, NSNumber *maxY, BOOL * _Nonnull stop) {
         if ([maxY floatValue]<[[self.maxYDict objectForKey:minColunmn]floatValue]) {
             minColunmn=column;
@@ -99,12 +112,12 @@
 }
 -(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect{
     NSLog(@"layoutAttributesForElementsInRect");
-//    NSInteger count = [self.collectionView numberOfItemsInSection:0];
-//    for (int i = 0; i<count; i++) {
-//        UICollectionViewLayoutAttributes *attrs = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
-//        [self.attrsArray addObject:attrs];
-//    
-//    }
+    //    NSInteger count = [self.collectionView numberOfItemsInSection:0];
+    //    for (int i = 0; i<count; i++) {
+    //        UICollectionViewLayoutAttributes *attrs = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
+    //        [self.attrsArray addObject:attrs];
+    //
+    //    }
     NSLog(@"%zd",self.attrsArray.count);
     return self.attrsArray;
 }

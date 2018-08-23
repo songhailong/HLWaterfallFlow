@@ -34,7 +34,6 @@
 		82A057E4212D117700F3B1A1 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A057D2212D117600F3B1A1 /* UIImageView+WebCache.m */; };
 		82A057E5212D117700F3B1A1 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A057D4212D117600F3B1A1 /* UIView+WebCacheOperation.m */; };
 		82A057E6212D117700F3B1A1 /* 使用说明.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82A057D5212D117600F3B1A1 /* 使用说明.txt */; };
-		82A057E9212D234E00F3B1A1 /* HLWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A057E8212D234E00F3B1A1 /* HLWaterfallLayout.m */; };
 		82A05819212D253500F3B1A1 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A057ED212D253400F3B1A1 /* MJRefreshAutoFooter.m */; };
 		82A0581A212D253500F3B1A1 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A057EF212D253400F3B1A1 /* MJRefreshBackFooter.m */; };
 		82A0581B212D253500F3B1A1 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A057F1212D253400F3B1A1 /* MJRefreshComponent.m */; };
@@ -55,8 +54,15 @@
 		82A0582A212D253500F3B1A1 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A05814212D253400F3B1A1 /* UIScrollView+MJExtension.m */; };
 		82A0582B212D253500F3B1A1 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A05816212D253400F3B1A1 /* UIScrollView+MJRefresh.m */; };
 		82A0582C212D253500F3B1A1 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A05818212D253400F3B1A1 /* UIView+MJExtension.m */; };
-		82A0582E212D259000F3B1A1 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82A0582D212D259000F3B1A1 /* 1.plist */; };
 		82A05831212D27B200F3B1A1 /* HLLindLaout.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A05830212D27B200F3B1A1 /* HLLindLaout.m */; };
+		82A05834212D525200F3B1A1 /* HLWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A05833212D525200F3B1A1 /* HLWaterfallLayout.m */; };
+		82A05837212D568400F3B1A1 /* HLStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A05836212D568400F3B1A1 /* HLStackLayout.m */; };
+		82CF685A212EA2BF005D0A85 /* HLWaterLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF6859212EA2BF005D0A85 /* HLWaterLayout.m */; };
+		82CF685D212EA48A005D0A85 /* HMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF685B212EA48A005D0A85 /* HMWaterflowLayout.m */; };
+		82CF6860212EA742005D0A85 /* XRWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF685F212EA742005D0A85 /* XRWaterfallLayout.m */; };
+		82CF6862212EAEB8005D0A85 /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82CF6861212EAEB8005D0A85 /* 1.plist */; };
+		82CF6866212EB18C005D0A85 /* XRCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CF6864212EB18B005D0A85 /* XRCollectionViewCell.m */; };
+		82CF6867212EB18C005D0A85 /* XRCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CF6865212EB18B005D0A85 /* XRCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,8 +137,6 @@
 		82A057D3212D117600F3B1A1 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		82A057D4212D117600F3B1A1 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		82A057D5212D117600F3B1A1 /* 使用说明.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "使用说明.txt"; sourceTree = "<group>"; };
-		82A057E7212D234E00F3B1A1 /* HLWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLWaterfallLayout.h; sourceTree = "<group>"; };
-		82A057E8212D234E00F3B1A1 /* HLWaterfallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLWaterfallLayout.m; sourceTree = "<group>"; };
 		82A057EC212D253400F3B1A1 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		82A057ED212D253400F3B1A1 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		82A057EE212D253400F3B1A1 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -173,9 +177,22 @@
 		82A05816212D253400F3B1A1 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		82A05817212D253400F3B1A1 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		82A05818212D253400F3B1A1 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
-		82A0582D212D259000F3B1A1 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
 		82A0582F212D27B200F3B1A1 /* HLLindLaout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLLindLaout.h; sourceTree = "<group>"; };
 		82A05830212D27B200F3B1A1 /* HLLindLaout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLLindLaout.m; sourceTree = "<group>"; };
+		82A05832212D525200F3B1A1 /* HLWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLWaterfallLayout.h; sourceTree = "<group>"; };
+		82A05833212D525200F3B1A1 /* HLWaterfallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLWaterfallLayout.m; sourceTree = "<group>"; };
+		82A05835212D568400F3B1A1 /* HLStackLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLStackLayout.h; sourceTree = "<group>"; };
+		82A05836212D568400F3B1A1 /* HLStackLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLStackLayout.m; sourceTree = "<group>"; };
+		82CF6858212EA2BF005D0A85 /* HLWaterLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLWaterLayout.h; sourceTree = "<group>"; };
+		82CF6859212EA2BF005D0A85 /* HLWaterLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLWaterLayout.m; sourceTree = "<group>"; };
+		82CF685B212EA48A005D0A85 /* HMWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWaterflowLayout.m; sourceTree = "<group>"; };
+		82CF685C212EA48A005D0A85 /* HMWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWaterflowLayout.h; sourceTree = "<group>"; };
+		82CF685E212EA741005D0A85 /* XRWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRWaterfallLayout.h; sourceTree = "<group>"; };
+		82CF685F212EA742005D0A85 /* XRWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRWaterfallLayout.m; sourceTree = "<group>"; };
+		82CF6861212EAEB8005D0A85 /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
+		82CF6863212EB18B005D0A85 /* XRCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRCollectionViewCell.h; sourceTree = "<group>"; };
+		82CF6864212EB18B005D0A85 /* XRCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRCollectionViewCell.m; sourceTree = "<group>"; };
+		82CF6865212EB18B005D0A85 /* XRCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XRCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +243,13 @@
 		82A05778212D0E5600F3B1A1 /* HLWaterfallFlow */ = {
 			isa = PBXGroup;
 			children = (
+				82CF6863212EB18B005D0A85 /* XRCollectionViewCell.h */,
+				82CF6864212EB18B005D0A85 /* XRCollectionViewCell.m */,
+				82CF6865212EB18B005D0A85 /* XRCollectionViewCell.xib */,
+				82CF685E212EA741005D0A85 /* XRWaterfallLayout.h */,
+				82CF685F212EA742005D0A85 /* XRWaterfallLayout.m */,
+				82CF685C212EA48A005D0A85 /* HMWaterflowLayout.h */,
+				82CF685B212EA48A005D0A85 /* HMWaterflowLayout.m */,
 				82A057EA212D253400F3B1A1 /* MJRefresh */,
 				82A057B3212D117600F3B1A1 /* SDWebImage */,
 				82A05779212D0E5600F3B1A1 /* AppDelegate.h */,
@@ -236,16 +260,20 @@
 				82A057B1212D104600F3B1A1 /* HLImage.m */,
 				82A057AD212D101700F3B1A1 /* HLImageCell.h */,
 				82A057AE212D101700F3B1A1 /* HLImageCell.m */,
-				82A057E7212D234E00F3B1A1 /* HLWaterfallLayout.h */,
-				82A057E8212D234E00F3B1A1 /* HLWaterfallLayout.m */,
 				82A0577F212D0E5600F3B1A1 /* Main.storyboard */,
 				82A05782212D0E5A00F3B1A1 /* Assets.xcassets */,
 				82A05784212D0E5A00F3B1A1 /* LaunchScreen.storyboard */,
-				82A0582D212D259000F3B1A1 /* 1.plist */,
+				82CF6861212EAEB8005D0A85 /* 1.plist */,
 				82A05787212D0E5A00F3B1A1 /* Info.plist */,
 				82A05788212D0E5A00F3B1A1 /* main.m */,
 				82A0582F212D27B200F3B1A1 /* HLLindLaout.h */,
 				82A05830212D27B200F3B1A1 /* HLLindLaout.m */,
+				82A05832212D525200F3B1A1 /* HLWaterfallLayout.h */,
+				82A05833212D525200F3B1A1 /* HLWaterfallLayout.m */,
+				82A05835212D568400F3B1A1 /* HLStackLayout.h */,
+				82A05836212D568400F3B1A1 /* HLStackLayout.m */,
+				82CF6858212EA2BF005D0A85 /* HLWaterLayout.h */,
+				82CF6859212EA2BF005D0A85 /* HLWaterLayout.m */,
 			);
 			path = HLWaterfallFlow;
 			sourceTree = "<group>";
@@ -507,7 +535,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82A0582E212D259000F3B1A1 /* 1.plist in Resources */,
+				82CF6862212EAEB8005D0A85 /* 1.plist in Resources */,
+				82CF6867212EB18C005D0A85 /* XRCollectionViewCell.xib in Resources */,
 				82A05786212D0E5A00F3B1A1 /* LaunchScreen.storyboard in Resources */,
 				82A05783212D0E5A00F3B1A1 /* Assets.xcassets in Resources */,
 				82A05827212D253500F3B1A1 /* MJRefresh.bundle in Resources */,
@@ -541,9 +570,12 @@
 				82A05829212D253500F3B1A1 /* NSBundle+MJRefresh.m in Sources */,
 				82A0577E212D0E5600F3B1A1 /* ViewController.m in Sources */,
 				82A057E3212D117700F3B1A1 /* UIImageView+HighlightedWebCache.m in Sources */,
+				82CF685D212EA48A005D0A85 /* HMWaterflowLayout.m in Sources */,
 				82A05820212D253500F3B1A1 /* MJRefreshAutoStateFooter.m in Sources */,
+				82CF6860212EA742005D0A85 /* XRWaterfallLayout.m in Sources */,
 				82A057E4212D117700F3B1A1 /* UIImageView+WebCache.m in Sources */,
 				82A057E2212D117700F3B1A1 /* UIImage+WebP.m in Sources */,
+				82A05837212D568400F3B1A1 /* HLStackLayout.m in Sources */,
 				82A05822212D253500F3B1A1 /* MJRefreshBackNormalFooter.m in Sources */,
 				82A057DE212D117700F3B1A1 /* SDWebImagePrefetcher.m in Sources */,
 				82A05789212D0E5A00F3B1A1 /* main.m in Sources */,
@@ -560,21 +592,23 @@
 				82A0581D212D253500F3B1A1 /* MJRefreshHeader.m in Sources */,
 				82A057DF212D117700F3B1A1 /* UIButton+WebCache.m in Sources */,
 				82A0581E212D253500F3B1A1 /* MJRefreshAutoGifFooter.m in Sources */,
-				82A057E9212D234E00F3B1A1 /* HLWaterfallLayout.m in Sources */,
 				82A057E1212D117700F3B1A1 /* UIImage+MultiFormat.m in Sources */,
 				82A057B2212D104600F3B1A1 /* HLImage.m in Sources */,
 				82A057DC212D117700F3B1A1 /* SDWebImageDownloaderOperation.m in Sources */,
 				82A05823212D253500F3B1A1 /* MJRefreshBackStateFooter.m in Sources */,
 				82A0582A212D253500F3B1A1 /* UIScrollView+MJExtension.m in Sources */,
+				82A05834212D525200F3B1A1 /* HLWaterfallLayout.m in Sources */,
 				82A0582B212D253500F3B1A1 /* UIScrollView+MJRefresh.m in Sources */,
 				82A0581F212D253500F3B1A1 /* MJRefreshAutoNormalFooter.m in Sources */,
 				82A057E0212D117700F3B1A1 /* UIImage+GIF.m in Sources */,
+				82CF6866212EB18C005D0A85 /* XRCollectionViewCell.m in Sources */,
 				82A057D9212D117700F3B1A1 /* SDWebImageCompat.m in Sources */,
 				82A05819212D253500F3B1A1 /* MJRefreshAutoFooter.m in Sources */,
 				82A05828212D253500F3B1A1 /* MJRefreshConst.m in Sources */,
 				82A0581C212D253500F3B1A1 /* MJRefreshFooter.m in Sources */,
 				82A057D7212D117700F3B1A1 /* NSData+ImageContentType.m in Sources */,
 				82A05825212D253500F3B1A1 /* MJRefreshNormalHeader.m in Sources */,
+				82CF685A212EA2BF005D0A85 /* HLWaterLayout.m in Sources */,
 				82A057AF212D101700F3B1A1 /* HLImageCell.m in Sources */,
 				82A057D6212D117700F3B1A1 /* MKAnnotationView+WebCache.m in Sources */,
 				82A05831212D27B200F3B1A1 /* HLLindLaout.m in Sources */,
@@ -748,8 +782,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6CUR897C43;
+				DEVELOPMENT_TEAM = 669UDNZ7MP;
 				INFOPLIST_FILE = HLWaterfallFlow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -765,8 +800,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6CUR897C43;
+				DEVELOPMENT_TEAM = 669UDNZ7MP;
 				INFOPLIST_FILE = HLWaterfallFlow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
