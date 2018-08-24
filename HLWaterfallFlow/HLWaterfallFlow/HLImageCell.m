@@ -8,6 +8,7 @@
 
 #import "HLImageCell.h"
 #import "UIImageView+WebCache.h"
+#import "Masonry.h"
 @implementation HLImageCell
 -(instancetype)initWithFrame:(CGRect)frame{
    // NSLog(@"赋值新的%f",frame.size.height);
@@ -17,10 +18,20 @@
         self.backgroundColor=[UIColor whiteColor];
         [self.contentView addSubview:self.PimageView];
         [self.contentView addSubview:self.deifalLable];
-        self.PimageView.frame=CGRectMake(0, 0, frame.size.width, frame.size.height);
-        
-         NSLog(@"赋值新的%f",frame.size.height);
-//        self.deifalLable.frame=CGRectMake(0, frame.size.height-20, frame.size.width, 20);
+        //self.PimageView.frame=CGRectMake(0, 0, frame.size.width, frame.size.height);
+        [self.PimageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(@0);
+            make.bottom.mas_equalTo(-20);
+            make.left.mas_equalTo(@0);
+            make.right.mas_equalTo(@0);
+        }];
+       // NSLog(@"赋值新的%f",frame.size.height);
+        [self.deifalLable mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.PimageView.mas_bottom).with.offset(0);
+            make.left.mas_equalTo(@0);
+            make.right.mas_equalTo(@0);
+            make.bottom.mas_equalTo(@0);
+        }];
     }
     return self;
 }

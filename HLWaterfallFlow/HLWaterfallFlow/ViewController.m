@@ -23,10 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    XRWaterfallLayout *waterfall=[[XRWaterfallLayout alloc] initWithColumnCount:2];
+    HLWaterLayout *waterfall=[[HLWaterLayout alloc] init];
     waterfall.delegate=self;
     //或者一次性设置
-    [waterfall setColumnSpacing:10 rowSpacing:10 sectionInset:UIEdgeInsetsMake(10, 10, 10, 10)];
+    //[waterfall setColumnSpacing:10 rowSpacing:10 sectionInset:UIEdgeInsetsMake(10, 10, 10, 10)];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:waterfall];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerClass:[HLImageCell class] forCellWithReuseIdentifier:@"cell"];
@@ -59,22 +59,22 @@
 //        [self.collectionView footerEndRefreshing];
 //    });
 //}
-////根据item的宽度与indexPath计算每一个item的高度
-//- (CGFloat)waterfallLayout:(HLWaterLayout *)waterfallLayout itemHeightForWidth:(CGFloat)itemWidth atIndexPath:(NSIndexPath *)indexPath {
-//    //根据图片的原始尺寸，及显示宽度，等比例缩放来计算显示高度
-//    HLImage *image = self.images[indexPath.item];
-//    return image.imageH / image.imageW * itemWidth+20;
-//}
+//根据item的宽度与indexPath计算每一个item的高度
+- (CGFloat)waterfallLayout:(HLWaterLayout *)waterfallLayout itemHeightForWidth:(CGFloat)itemWidth atIndexPath:(NSIndexPath *)indexPath {
+    //根据图片的原始尺寸，及显示宽度，等比例缩放来计算显示高度
+    HLImage *image = self.images[indexPath.item];
+    return image.imageH / image.imageW * itemWidth+20;
+}
 //-(CGFloat)waterflowLayout:(HMWaterflowLayout *)waterflowLayout heightForWidth:(CGFloat)width atIndexPath:(NSIndexPath *)indexPath{
 //    //根据图片的原始尺寸，及显示宽度，等比例缩放来计算显示高度
 //    HLImage *image = self.images[indexPath.item];
 //    return image.imageH / image.imageW *width;
 //}
 
--(CGFloat)waterfallLayout:(XRWaterfallLayout *)waterfallLayout itemHeightForWidth:(CGFloat)itemWidth atIndexPath:(NSIndexPath *)indexPath{
-    HLImage *image = self.images[indexPath.item];
-      return image.imageH / image.imageW *itemWidth;
-}
+//-(CGFloat)waterfallLayout:(XRWaterfallLayout *)waterfallLayout itemHeightForWidth:(CGFloat)itemWidth atIndexPath:(NSIndexPath *)indexPath{
+//    HLImage *image = self.images[indexPath.item];
+//      return image.imageH / image.imageW *itemWidth;
+//}
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     //NSLog(@"%zd",self.images.count);
     return self.images.count;

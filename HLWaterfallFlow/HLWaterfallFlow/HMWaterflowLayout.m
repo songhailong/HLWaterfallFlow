@@ -43,7 +43,7 @@
         self.columnMargin = 10;
         self.rowMargin = 10;
         self.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
-        self.columnsCount = 3;
+        self.columnsCount = 2;
     }
     return self;
 }

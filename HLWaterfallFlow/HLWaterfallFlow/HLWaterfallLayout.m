@@ -31,10 +31,10 @@
         self.rowMargin=10;
         self.columnsCount=2;
         self.sectionInsets=UIEdgeInsetsMake(10, 10, 10, 10);
-        for (int i = 0; i<self.columnsCount; i++) {
-            NSString *column = [NSString stringWithFormat:@"%d", i];
-            self.maxYDict[column] = @(self.sectionInset.top);
-        }
+//        for (int i = 0; i<self.columnsCount; i++) {
+//            NSString *column = [NSString stringWithFormat:@"%d", i];
+//            self.maxYDict[column] = @(self.sectionInset.top);
+//        }
         
     }
     return self;
@@ -53,6 +53,10 @@
 //}
 -(void)prepareLayout{
     [super prepareLayout];
+    for (int i = 0; i<self.columnsCount; i++) {
+        NSString *column = [NSString stringWithFormat:@"%d", i];
+        self.maxYDict[column] = @(self.sectionInset.top);
+    }
     NSInteger count = [self.collectionView numberOfItemsInSection:0];
     
     NSLog(@"获取个数%zd",count);
@@ -81,7 +85,7 @@
     }];
     //计算宽度
     
-    CGFloat width=self.collectionView.frame.size.width-self.sectionInsets.left-self.sectionInsets.right-(self.columnsCount-1)*self.columnMargin/self.columnsCount;
+    CGFloat width=(self.collectionView.frame.size.width-self.sectionInsets.left-self.sectionInsets.right-(self.columnsCount-1)*self.columnMargin)/self.columnsCount;
     
     CGFloat heigt=[_delegate waterfallLayout:self itemHeightForWidth:width atIndexPath:indexPath];
     
